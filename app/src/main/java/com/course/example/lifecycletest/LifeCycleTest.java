@@ -8,12 +8,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.util.Log;
 
 public class LifeCycleTest extends Activity {
 
 	private Button btnFinish;
 	private TextView txtToDo;
 	private EditText txtMsg;
+	private String tag = "LifeCycleTest";
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,7 @@ public class LifeCycleTest extends Activity {
 
 		Toast.makeText(this, "onCreate - Test", Toast.LENGTH_LONG)
 				.show();
+		Log.e(tag, "onCreate");
 	}//onCreate
 	
 	
@@ -54,6 +57,7 @@ public class LifeCycleTest extends Activity {
 		super.onDestroy();
 		Toast.makeText(this, "onDestroy - Test", Toast.LENGTH_LONG)
 				.show();
+        Log.e(tag, "onDestroy");
 	}
 
 	@Override
@@ -61,6 +65,7 @@ public class LifeCycleTest extends Activity {
 		super.onPause();
 		Toast.makeText(this, "onPause - Test", Toast.LENGTH_LONG)
 				.show();
+        Log.e(tag, "onPause");
 
 	}
 
@@ -69,6 +74,7 @@ public class LifeCycleTest extends Activity {
 		super.onRestart();
 		Toast.makeText(this, "onRestart - Test", Toast.LENGTH_LONG)
 				.show();
+        Log.e(tag, "onRestart");
 	}
 
 	@Override
@@ -76,6 +82,7 @@ public class LifeCycleTest extends Activity {
 		super.onResume();
 		Toast.makeText(this, "onResume - Test", Toast.LENGTH_LONG)
 				.show();
+        Log.e(tag, "onResume");
 	}
 
 	@Override
@@ -83,6 +90,7 @@ public class LifeCycleTest extends Activity {
 		super.onStart();
 		Toast.makeText(this, "onStart - Test", Toast.LENGTH_LONG)
 				.show();
+        Log.e(tag, "onStart");
 	}
 
 	@Override
@@ -90,6 +98,7 @@ public class LifeCycleTest extends Activity {
 		super.onStop();
 		Toast.makeText(this, "onStop - Test", Toast.LENGTH_LONG)
 				.show();
-	}	
+        Log.e(tag, "onStop");
+	}
 	
 }//LifeCycleTest
