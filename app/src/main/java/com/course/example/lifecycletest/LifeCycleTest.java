@@ -22,8 +22,10 @@ public class LifeCycleTest extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
+		//get references to widgets
 		txtToDo = (TextView) findViewById(R.id.txtToDo);
 		txtMsg = (EditText) findViewById(R.id.txtMsg);
+		btnFinish = (Button) findViewById(R.id.btnFinish);
 
 		String msg = "Instructions:                	                 \n "
 				+ "0. New instance (onCreate, onStart, onResume)   \n "
@@ -37,8 +39,7 @@ public class LifeCycleTest extends Activity {
 		txtToDo.setText(msg);
 		txtMsg.setHint("Enter some data here");
 
-		btnFinish = (Button) findViewById(R.id.btnFinish);
-
+		//set listener on button
 		btnFinish.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View v) {
