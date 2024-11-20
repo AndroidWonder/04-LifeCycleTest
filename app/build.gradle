@@ -1,8 +1,7 @@
 apply plugin: 'com.android.application'
 android {
-
+    compileSdk 33
     defaultConfig {
-        compileSdk 33
         applicationId "com.course.example.lifecycletest"
         minSdkVersion 26
         targetSdkVersion 33
