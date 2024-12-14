@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
 android {
-    compileSdk 33
+    compileSdk 34
     defaultConfig {
         applicationId "com.course.example.lifecycletest"
         minSdkVersion 26
@@ -15,6 +15,7 @@ android {
     }
 
     namespace 'com.course.example.lifecycletest'
+
 }
 
 dependencies {
